@@ -1,18 +1,17 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int
-main ()
+ 
+int main()
 {
-  int n, i;
-  cin >> n;
-  int arr[n];
-  for (i = 0; i < n; i++)
-    cin >> arr[i];
-  int max = arr[0];
-  for (i = 0; i < n; i++)
+    int N, num, max = 0;
+    cin >> N;
+    while (cin >> num)
     {
-      if (arr[i] > max)
-	max = arr[i];
+        if (num > max)
+        {
+            max = num;
+        }
     }
-  cout << max << endl;
-  return 0;
+    cout << max << endl;
+    return 0;
+}
