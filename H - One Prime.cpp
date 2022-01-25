@@ -1,24 +1,27 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int n, prime = 1;
-    cin >> n;
- 
-    for (int i = 2; i < n; i++)
+
+    int number, divisor;
+    bool isprime = true;
+    cin >> number;
+
+    for (divisor = 2; divisor <= (number / 2); divisor++)
     {
-        if (n % i == 0)
+        if ((number % divisor) == 0)
         {
-            prime = 0;
+            isprime = false;
             break;
         }
     }
-    if (prime == 0 && n != 2)
+    if (isprime)
     {
- 
-        cout << "NO" << endl;
+        cout << "YES" << endl;
     }
     else
-        cout << "YES" << endl;
+        cout << "NO" << endl;
+
     return 0;
 }
